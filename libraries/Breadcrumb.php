@@ -22,9 +22,13 @@ class Breadcrumb {
 	 * Options
 	 *
 	 */
-	private $_divider 		= ' &nbsp;&#8250;&nbsp; ';
-	private $_tag_open 		= '<div id="breadcrumb">';
-	private $_tag_close 	= '</div>';
+	private $_divider 			= ' &nbsp;&#8250;&nbsp; ';
+	private $_tag_open 			= '<div id="breadcrumb">';
+	private $_tag_close 		= '</div>';
+	private $_item_open			= '';
+	private $_item_close		= '';
+	private $_last_item_open 	= '<span>';
+	private $_last_item_close 	= '</span>';
 	
 	/**
 	 * Constructor
@@ -127,11 +131,11 @@ class Breadcrumb {
 				
 				// if last element
 				if (end(array_keys($this->breadcrumbs)) == $key) {
-					$output .= '<span>' . $crumb['title'] . '</span>';
+					$output .= $this->_last_item_open . $crumb['title'] . $this->_last_item_close;
 					
 				// else add link and divider
 				} else {
-					$output .= '<a href="' . $crumb['href'] . '">' . $crumb['title'] . '</a>';
+					$output .= $this->_item_open . '<a href="' . $crumb['href'] . '">' . $crumb['title'] . '</a>' . $this->_item_close;
 				}
 			}
 			
