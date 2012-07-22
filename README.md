@@ -2,6 +2,8 @@
 
 CodeIgniter-Breadcrumb is a library that helps your build HTML breadcrumbs with CodeIgniter.
 
+This version is customised to work with breadcrumbs using Twitter Bootstrap.
+
 
 ## Requirements
 
