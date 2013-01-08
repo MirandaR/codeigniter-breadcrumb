@@ -12,12 +12,15 @@ This version is customised to work with breadcrumbs using Twitter Bootstrap.
 
 ## Example
 
-	// load libary
+	// load library
 	$this->load->library('breadcrumb');
 	
 	// add breadcrumbs
-	$this->breadcrumb->appendCrumb('Home', '/');
-	$this->breadcrumb->appendCrumb('Page', '/page');
+	$this->breadcrumb->append('Page', 'page');
+	
+	// prepend breadcrumbs
+	// link parameter is optional
+	$this->breadcrumb->prepend('Home');
 	
 	// put this line in view to output
 	$this->breadcrumb->output();
