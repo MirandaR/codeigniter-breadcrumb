@@ -23,7 +23,7 @@ $config['tag_open'] = '<ul class="breadcrumb">';
 $config['tag_close'] = '</ul>';
 
 $config['item_open'] = '<li>';
-$config['item_close'] = '<span class="divider">/</span> </li>';
+$config['item_close'] = ' <span class="divider">/</span></li>';
 
 $config['last_item_open'] = '<li class="active">';
 $config['last_item_close'] = '</li>';
