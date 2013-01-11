@@ -112,6 +112,23 @@ class Breadcrumb {
 	// --------------------------------------------------------------------
 
 	/**
+	 * Add multiple crumbs to the stack
+	 *
+	 * @access	public
+	 * @param	array $breadcrumbs
+	 * @return	void
+	 */
+	function populate($breadcrumbs = array())
+	{
+		foreach ($breadcrumbs as $title => $href)
+		{
+			$this->append($title, $href);
+		}
+	}
+	
+	// --------------------------------------------------------------------
+
+	/**
 	 * Generate breadcrumb
 	 *
 	 * @access	public
