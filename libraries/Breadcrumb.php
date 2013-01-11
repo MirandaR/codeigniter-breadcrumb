@@ -43,6 +43,8 @@ class Breadcrumb {
 			$this->initialize($params);
 		}
 		
+		$this->load->helper('url');
+		
 		log_message('debug', "Breadcrumb Class Initialized");
 	}
 
@@ -132,7 +134,7 @@ class Breadcrumb {
 				
 				// else add link and divider
 				} else {
-					$output .= $this->_item_open . '<a href="' . $crumb['href'] . '">' . $crumb['title'] . '</a>' . $this->_item_close . "\n";
+					$output .= $this->_item_open . '<a href="' . site_url($crumb['href']) . '">' . $crumb['title'] . '</a>' . $this->_item_close . "\n";
 				}
 			}
 			
