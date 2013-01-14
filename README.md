@@ -22,5 +22,12 @@ This version is customised to work with breadcrumbs using Twitter Bootstrap.
 	// link parameter is optional
 	$this->breadcrumb->prepend('Home');
 	
+	// populate multiple
+	$this->breadcrumb->populate(array(
+		'Admin' => 'admin',
+		'Members' => 'admin/members',
+		'All'
+	));
+	
 	// put this line in view to output
 	$this->breadcrumb->output();
