@@ -120,9 +120,9 @@ class Breadcrumb {
 	 */
 	function populate($breadcrumbs = array())
 	{
-		foreach ($breadcrumbs as $title => $href)
+		foreach ($breadcrumbs as $key => $value)
 		{
-			$this->append($title, $href);
+			$this->append(is_int($key) ? $value : $key, $value);
 		}
 	}
 	
