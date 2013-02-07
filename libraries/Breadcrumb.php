@@ -79,7 +79,7 @@ class Breadcrumb {
 	 * @access	public
 	 * @param	string $title
 	 * @param	string $href
-	 * @return	void
+	 * @return	self
 	 */
 	function append($title, $href = NULL)
 	{
@@ -88,6 +88,8 @@ class Breadcrumb {
 		
 		// add to end
 		$this->breadcrumbs[] = array('title' => $title, 'href' => $href);
+		
+		return $this;
 	}
 	
 	// --------------------------------------------------------------------
@@ -98,7 +100,7 @@ class Breadcrumb {
 	 * @access	public
 	 * @param	string $title
 	 * @param	string $href
-	 * @return	void
+	 * @return	self
 	 */
 	function prepend($title, $href = NULL)
 	{
@@ -107,6 +109,8 @@ class Breadcrumb {
 		
 		// add to start
 		array_unshift($this->breadcrumbs, array('title' => $title, 'href' => $href));
+		
+		return $this;
 	}
 	
 	// --------------------------------------------------------------------
@@ -116,7 +120,7 @@ class Breadcrumb {
 	 *
 	 * @access	public
 	 * @param	array $breadcrumbs
-	 * @return	void
+	 * @return	self
 	 */
 	function populate($breadcrumbs = array())
 	{
@@ -124,6 +128,8 @@ class Breadcrumb {
 		{
 			$this->append(is_int($key) ? $value : $key, $value);
 		}
+		
+		return $this;
 	}
 	
 	// --------------------------------------------------------------------
