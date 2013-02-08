@@ -152,7 +152,8 @@ class Breadcrumb {
 			foreach ($this->breadcrumbs as $key => $crumb) {
 				
 				// if last element
-				if (end(array_keys($this->breadcrumbs)) == $key) {
+				$array_keys = array_keys($this->breadcrumbs);
+				if (end($array_keys) == $key) {
 					$output .= $this->_last_item_open . $crumb['title'] . $this->_last_item_close;
 				
 				// else add link and divider
