@@ -43,8 +43,6 @@ class Breadcrumb {
 			$this->initialize($params);
 		}
 		
-		$this->load->helper('url');
-		
 		log_message('debug', "Breadcrumb Class Initialized");
 	}
 
